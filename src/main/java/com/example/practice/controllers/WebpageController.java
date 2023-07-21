@@ -29,7 +29,7 @@ private CustomUserDetailService service;
 
     @PostMapping("/login")
     public String login(@ModelAttribute("user") LoginUserDto loginUserDto) {
-        service.registerUser(loginUserDto.toUser());
+        service.loginUser(loginUserDto.toUser());
         return "login";
     }
 
